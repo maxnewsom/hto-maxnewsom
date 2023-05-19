@@ -4,6 +4,7 @@ sauce:
 region: us-west-1
 suites:
   - name: Hosted Test Orchestration Demo
+    workload: webdriver
     image: $DOCKER_IMAGE
     imagePullAuth:
       user: $DOCKER_USERNAME
