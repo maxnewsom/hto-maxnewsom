@@ -63,40 +63,12 @@ def test_remove_from_cart(driver):
 
 def test_needlessly_long_test(driver):
     login(driver)
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
+    for x in range(50)
+        driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
+        driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
 
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-    driver.find_element(by=By.ID, value="continue-shopping").click()
+        driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
+        driver.find_element(by=By.ID, value="continue-shopping").click()
 
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
-
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-    driver.find_element(by=By.ID, value="continue-shopping").click()    
-
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
-
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-    driver.find_element(by=By.ID, value="continue-shopping").click()
-    
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
-
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-    driver.find_element(by=By.ID, value="continue-shopping").click()
-
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
-
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-    driver.find_element(by=By.ID, value="continue-shopping").click()
-
-    driver.find_element(by=By.ID, value="add-to-cart-sauce-labs-backpack").click()
-    driver.find_element(by=By.CSS_SELECTOR, value=".shopping_cart_link").click()
-
-    driver.find_element(by=By.ID, value="remove-sauce-labs-backpack").click()
-        
     items = driver.find_elements(by=By.CSS_SELECTOR, value=".shopping_cart_badge")
     assert 0 == len(items)
