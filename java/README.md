@@ -58,7 +58,7 @@ This repo uses maven-surefire for running tests in parallel. Specify the amount 
 This will run all 15 tests in parallel:
 
 ```shell
-mvn clean test -Dselenium.parallel=15
+mvn -B test -Dselenium.parallel=15 -Dselenium.platform=sauce
 ```
 
 
