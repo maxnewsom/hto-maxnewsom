@@ -44,7 +44,7 @@ public class AuthenticationTest extends BaseTest {
   }
     @Test
     public void loginWorks() throws InterruptedException {
-    for(int i=0; i<205; i++) {
+    for(int i=0; i<405; i++) {
     driver.get("https://www.saucedemo.com/");
     driver.findElement(By.id("user-name")).sendKeys("standard_user");
     driver.findElement(By.id("password")).sendKeys("secret_sauce");
