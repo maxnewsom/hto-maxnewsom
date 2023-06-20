@@ -52,7 +52,7 @@ public class BaseTest {
         public void testFailed(ExtensionContext context, Throwable cause) {
             if (driver != null) {
                 try {
-                    if ("SAUCE".equals(platform)) {
+                    if ("sauce".equals(platform)) {
                         ((JavascriptExecutor) driver).executeScript("sauce:job-result=failed");
                     } else {
                         System.out.println("Test Failed!");
@@ -68,7 +68,7 @@ public class BaseTest {
         public void testSuccessful(ExtensionContext context) {
             if (driver != null) {
                 try {
-                    if ("SAUCE".equals(platform)) {
+                    if ("sauce".equals(platform)) {
                         ((JavascriptExecutor) driver).executeScript("sauce:job-result=passed");
                     } else {
                         System.out.println("Test Passed!");
