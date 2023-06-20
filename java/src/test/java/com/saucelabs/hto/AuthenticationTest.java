@@ -41,5 +41,20 @@ public class AuthenticationTest extends BaseTest {
         driver.findElement(By.id("logout_sidebar_link")).click();
 
         Assertions.assertEquals("https://www.saucedemo.com/", driver.getCurrentUrl());
+  }
+    @Test
+    public void loginWorks() throws InterruptedException {
+    for(int i=0; i<105; i++) {
+    driver.get("https://www.saucedemo.com/");
+    driver.findElement(By.id("user-name")).sendKeys("standard_user");
+    driver.findElement(By.id("password")).sendKeys("secret_sauce");
+    driver.findElement(By.id("login-button")).click();
+    driver.findElement(By.id("react-burger-menu-btn")).click();
+    Thread.sleep(1000);
+
+    driver.findElement(By.id("logout_sidebar_link")).click();
+
+    Assertions.assertEquals("https://www.saucedemo.com/", driver.getCurrentUrl());
     }
+}
 }
